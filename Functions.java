@@ -33,8 +33,39 @@ public class Functions {
 
         pointOne = inputPoint("введите координаты новой точки");
         output(pointOne);
+
+        //
+        double z = 1;
+        for (int i = 0; i < 4; i++) {
+            move(z, 13.5);
+        }
+
+        for (int i = 0; i < 3; i++) {
+            move(pointOne, 2.5);
+        }
+
+        Double z2 = z;
+        for (int i = 0; i < 4; i++) {
+            move(z2, 10);
+        }
     }
 
+    static void move(Point pp, double distance)
+    {
+        pp.x = pp.x+distance;
+        output(pp);
+    }
+
+    static void move(Double x, double distance)
+    {
+        x =  x+distance;
+        output(x);
+    }
+    static void move(double x, double distance)
+    {
+        x = x+distance;
+        output(x);
+    }
     static void output(String s, int y) {
         System.out.println("вывожу строку "+s+" несколько раз");
         for (int i = 0; i < y; i++) {
@@ -56,6 +87,8 @@ public class Functions {
         p.y = scan.nextDouble();
         return p;
     }
+
+
 
 }
 
